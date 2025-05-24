@@ -15,7 +15,11 @@ myForm.addEventListener("submit" , function(event){
 
             fetch("https://jsonplaceholder.typicode.com/users")
             .then((response) => response.json())
-            .then((data) => resolve(data))
+            .then((data) => {resolve(data)
+                let emails = data.map((users) =>  {return users.email} );
+                console.log(emails)
+
+            })
             .catch((error) => reject(error));
 
         })
@@ -40,7 +44,7 @@ myForm.addEventListener("submit" , function(event){
                 let userData = response.find((user) => user.id === foundUser.id);
                 if(userData){
                     localStorage.setItem("userData" , JSON.stringify(userData));
-                    window.location.href = "./home.html";
+                    window.location.href = "./home.html"; 
 
                 }else{
                     alert("no user found !");
