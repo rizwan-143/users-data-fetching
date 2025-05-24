@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row bg-black text-white p-2" style="border-radius: 80px;">
+            <div class="col d-flex justify-content-around align-items-center">
+                <div class="mytodo text-capitalize text-white fw-bold">my application </div>
+                <div class="username text-capitalize text-white fw-bold" id="user-name">hello</div>
+                <button class="btn btn-danger" id="logout">logout</button>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col d-flex justify-content-center align-items-start flex-column">
+                <div class="user-id text-capitalize border-bottom" id="user-id"></div>
+                <div class="user-title text-capitalize border-bottom" id="user-title"></div>
+                <div class="user-complete text-capitalize border-bottom" id="user-complete"></div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="./home.js"></script>
+</body>
+</html>
